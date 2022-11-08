@@ -1,2 +1,3 @@
-const puerto = process.env.PORT || 3000;
-module.exports = {puerto};
+var port = process.env.PORT || 3000;
+
+module.exports = {port};
