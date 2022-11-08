@@ -3,11 +3,15 @@ const cn = require('../bd/conexionmysql.js');
 
 //PRODUCTO LISTAR
 controller.productoshow= async(req,res) =>{
+    //CALL listproductos ()
 //    select * from productos where estado=true order by idproducto desc
     await cn.query(`CALL listproductos ()`,(err,rows,fields)=>{
         if(!err){
             //aki importante para no enviar doble llave
-            res.json(rows[0]);
+            //res.json(rows[0]);
+
+           res.json(rows);
+           console.log(rows)
             //Para Postgrel..lista
             //res.json(rows.rows);            
         } else {
