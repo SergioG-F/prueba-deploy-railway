@@ -2,7 +2,7 @@ const express   =   require ("express");
 const cords     =   require("cors");
 const path      =   require('path');
 const app       =   express();
-const {port} = require('../src/config/port/configport.js');
+const {PORT} = require('../src/config/bd/configbd.js');
 
 
 //Settings
@@ -33,7 +33,7 @@ app.get('*',(req,res)=>{
    // res.send('404 | Page Not Found');
    res.sendFile(__dirname+'/public/404.html');
 })
-app.listen(port,()=>{
-    console.log(`TIENDA ANGIE EN ANDROID PUERTO LISTEN: :${port}`);
+app.listen(PORT,()=>{
+    console.log(`TIENDA ANGIE EN ANDROID PUERTO ESCUCHANDO..: :${PORT}`);
 
 });
