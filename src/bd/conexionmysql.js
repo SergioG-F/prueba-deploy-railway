@@ -6,7 +6,7 @@ const  poolmysql =  mysql.createPool ( {
     password:DB_PASSWORD,
     database:DB_NAME,
     port:DB_PORT,
-    multipleStatements: true
+  //  multipleStatements: true
   } ) ;
   console.log("BADE DE DATOS  MYSQL ONLINE");
 
