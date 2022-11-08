@@ -3,7 +3,7 @@ const router        = express.Router();
 const controller    = require("../controller/producto.controller.js");
 
 //PRODUCTO LISTAR
-router.get('/productos',controller.productoshow);
+router.get('/producto',controller.productoshow);
 
 //PRODUCTO por ID
 router.get('/producto/:id',controller.productobyid);
