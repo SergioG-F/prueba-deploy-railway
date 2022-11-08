@@ -2,12 +2,9 @@ const express   =   require ("express");
 const cords     =   require("cors");
 const path      =   require('path');
 const app       =   express();
-const {PORT} = require('../src/config/bd/configbd.js');
-
-
 //Settings
 
-//app.set('port',process.env.PORT || 3000);
+app.set('port',process.env.PORT || 3000);
 
 //Servir como contenido estatico para los html
 //MiddLewares
@@ -33,7 +30,8 @@ app.get('*',(req,res)=>{
    // res.send('404 | Page Not Found');
    res.sendFile(__dirname+'/public/404.html');
 })
-app.listen(PORT,()=>{
-    console.log(`TIENDA ANGIE EN ANDROID PUERTO ESCUCHANDO..: :${PORT}`);
+
+app.listen(app.get('port'),()=>{
+    console.log('TIENDA ANGIE EN ANDROID PUERTO LISTEN: ',app.get('port'));
 
 });
