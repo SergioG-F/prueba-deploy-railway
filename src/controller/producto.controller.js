@@ -1,11 +1,21 @@
 const controller = {};
 const cn = require('../bd/conexionmysql.js');
+controller.productoshow= async(req,res) =>{
+    await cn.query(`select * from productos`).then((data)=>{
+        res.json(data);
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
 
+}
+
+/*
 //PRODUCTO LISTAR
 controller.productoshow= async(req,res) =>{
     //CALL listproductos ()
 //    select * from productos where estado=true order by idproducto desc
-    await cn.query(`select * from productos`,(err,rows,fields)=>{
+    await cn.execute(`select * from productos`).then(data)
         if(!err){
             //aki importante para no enviar doble llave
             //res.json(rows[0]);
@@ -17,9 +27,8 @@ controller.productoshow= async(req,res) =>{
         } else {
             console.log(err);
         }
-    });
 };
-
+*/
 //PRODUCTO POR ID
 controller.productobyid= async(req,res) =>{
     const {id} = req.params;           
