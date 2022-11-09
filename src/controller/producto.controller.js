@@ -5,7 +5,7 @@ const cn = require('../bd/conexionmysql.js');
 controller.productoshow= async(req,res) =>{
     //CALL listproductos ()
 //    select * from productos where estado=true order by idproducto desc
-    await cn.query(`call prueba1 ()`,(err,rows,fields)=>{
+    await cn.query(`select * from productos`,(err,rows,fields)=>{
         if(!err){
             //aki importante para no enviar doble llave
             //res.json(rows[0]);
