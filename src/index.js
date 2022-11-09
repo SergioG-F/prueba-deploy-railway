@@ -10,7 +10,7 @@ app.set('port',process.env.PORT || 3000);
 
 //Servir como contenido estatico para los html
 //MiddLewares
-app.use(express.static(path.join(__dirname,'public')));
+//app.use(express.static(path.join(__dirname,'public')));
 
 app.use(cords());
 app.use(express.json());
