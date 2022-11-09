@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(cords());
 app.use(express.json());
 //Datos de un formulario lo comvierte en objeto;
-app.use(express.urlencoded({extended:false}));
+//app.use(express.urlencoded({extended:false}));
 //PARA VALIDAR CON TOKEN RUTAS
 // const authToken= require('./middleawers/AuthToken.js');
 // app.use(authToken);
@@ -28,10 +28,10 @@ app.use(require('./routes/producto.js'));
 // app.use(require('./routes/pedidoMysql')); 
 //
 
-app.get('*',(req,res)=>{
-   // res.send('404 | Page Not Found');
-   res.sendFile(__dirname+'/public/404.html');
-})
+// app.get('*',(req,res)=>{
+//    // res.send('404 | Page Not Found');
+//    res.sendFile(__dirname+'/public/404.html');
+// })
 
 app.listen(app.get('port'),()=>{
     console.log('TIENDA ANGIE EN ANDROID PUERTO LISTEN: ',app.get('port'));
