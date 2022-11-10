@@ -1,7 +1,7 @@
 const controller = {};
 const cn = require('../bd/conexionmysql.js');
 controller.productoshow= async(req,res) =>{
-    await cn.query(`CALL listproductos()`)
+    await cn.query(`CALL prueba1()`)
             .then(([data,fields])=>{
                 res.json(data);
     })
