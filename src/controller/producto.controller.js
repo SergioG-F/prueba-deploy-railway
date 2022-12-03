@@ -3,7 +3,7 @@ const cn = require('../bd/conexionmysql.js');
 controller.productoshow= async(req,res) =>{
     await cn.query(`CALL prueba1()`)
             .then((data)=>{
-                res[0].json(data);
+                res.json(data);
     })
     .catch((error)=>{
         console.log(error)
