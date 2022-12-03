@@ -13,7 +13,7 @@ const  cn =  mysql.createPool( {
   // password:'vR4JgrPuOQg94b9FpeVP',
   // database:'railway',
   // port:'7766',
-  //multipleStatements: true, 
+  multipleStatements: true
 } );
 console.log("BADE DE DATOS  MYSQL ONLINE");
 module.exports = cn;
